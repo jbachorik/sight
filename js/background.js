@@ -98,6 +98,7 @@
   }
 
   function detectLanguage(contentType, url) {
+    url = url.replace("/\.htm(l)?$/", "");
     var fragment = getFragmentFromUrl(url);
     var filename = getFilenameFromUrl(url);
     var extension = getExtensionFromFilename(filename);
